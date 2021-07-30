@@ -1,10 +1,10 @@
 const express = require('express');
-const nodemailer = require('nodemailer');
+/*const nodemailer = require('nodemailer');
 const cors = require('cors');
-const bodyParser = require('body-parser');
+const bodyParser = require('body-parser');*/
 
-const app = express();
 const port = process.env.port || 3010;
+const app = express();/*
 const email = process.env.email || '---';
 const pass = process.env.pass || '---';
 
@@ -21,12 +21,12 @@ let transporter = nodemailer.createTransport({
         user: email,
         pass: pass
     }
-});
+});*/
 
 app.get('/', async (req, res) => {
     res.send('hello world');
 })
-
+/*
 app.post('/send', async (req, res) => {
     const {name, mail, message} = req.body;
 
@@ -52,7 +52,7 @@ app.post('/send', async (req, res) => {
     });
 
     res.send({resultCode: 0});
-})
+})*/
 
 app.listen(port, () => {
     console.log(`Example app listening at http://localhost:${port}`)
